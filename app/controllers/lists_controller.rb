@@ -1,5 +1,7 @@
 class ListsController < ApplicationController
 
+  http_basic_authenticate_with name: "doozer", password: "tl"
+
   def new
     @list = List.new
   end
