@@ -1,13 +1,7 @@
 <p>
-  <strong>Title:</strong>
-  <%= item.title %>
+  <h3><%= item.title %> <%= link_to 'delete', [item.list, item], method: :delete, data: {confirm: 'Are you sure?'} %>  </h3>
 </p>
  
 <p>
-  <strong>Body:</strong>
   <%= item.body %>
-</p>
-
-<p>
-  <%= link_to 'Delete Item', [item.list, item], method: :delete, data: {confirm: 'Are you sure?'} %>
 </p>
